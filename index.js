@@ -32,13 +32,25 @@ const coffes = [
 ];
 
 
-//ex1 const allComments = coffes.filter(coffe => coffe.comments = "random comments");
+//ex1 const allComments = coffes.map(coffe => {
+//     coffe.comments = "random comment"
+//     return coffe
+// });
 
-//ex2 const changeNameComments = coffes.map((coffe) =>  ({name : coffe.name , comments : coffe.comments}) );
+//ex2 const changeNameComments = coffes.map((coffe) =>  ({name : coffe.name , comments : coffe.comments}));
 
-//ex3 const findName = coffes.filter(coffe => coffe.name === "Wormhole");
+//ex3 const findName = coffes.find(coffe => coffe.name === "Wormhole");
 
-//ex4 const obj = coffes.map((coffe) =>({ [coffe.name] : { lat: coffe.lat, long: coffe.lat } }));
+//ex4 const obj = coffes.reduce((coffe,{name,lat,long}) => {
+//         return {
+//             ...coffe,
+//             [name] : {
+//                 lat,
+//                 long
+//             }
+//         }
+// },{});
+
 
 
 //new exercise
@@ -56,17 +68,16 @@ const students = [
 //new exercise
 const numbers = [1, 10, 7, 6, 5];
 
-//ex1 const sumNumbers = numbers.reduce((accumulator ,curr) => accumulator + curr );
+//ex1 const sumNumbers = numbers.reduce((accumulator ,curr) => accumulator + curr, 0);
 
 //ex2 const startFive = numbers.reduce((accumulator, curr) => (accumulator + curr),5);
 
 //ex3 const sumEachNumber = numbers.map(number => number + 1);
 
-
 //new exercise
-const pets = ["dog", "chicken", "cat", "dog", "chicken", "chicken", "rabbit"];
+// const pets = ["dog", "chicken", "cat", "dog", "chicken", "chicken", "rabbit"];
 
-//ex1 const newPets = pets.reduce((accumulator, currentValue) => {
+// const newPets = pets.reduce((accumulator, currentValue) => {
 //       if (currentValue in accumulator) {
 //         accumulator[currentValue]++;
 //       }
@@ -77,4 +88,3 @@ const pets = ["dog", "chicken", "cat", "dog", "chicken", "chicken", "rabbit"];
 //      }
 // ,{}
 // );
-
